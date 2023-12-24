@@ -1,0 +1,167 @@
+@font-face {
+    font-family: 'Helvetica';
+    src: url('HelveticaNeue-01.ttf') format('ttf');
+    /* Aggiungi altri formati se necessario */
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#cuore{
+    margin:0 auto;
+    position: relative;
+    text-align: center;
+}
+#poesia {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 14pt;
+    line-height: 1.5rem;
+    margin-top: 2vh;
+    margin-left: 1vh;
+    margin-right: 1vh;
+    margin-bottom:1vh
+}
+
+#canzone {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 14pt;
+    line-height: 1.5rem;
+    margin-top: 2vh;
+    margin-left: 1vh;
+    margin-right: 1vh;
+    margin-bottom:1vh
+}
+
+#boxes * {
+    border: 1px solid transparent;
+}
+
+#boxes {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-template-areas:
+        'A B'
+        'A C';
+    gap: 32px;
+    place-content: center;
+    height: 100vh;
+}
+
+#player02 {
+    grid-area: B;
+    height: fit-content;
+}
+
+#player02 .controls {
+    display: flex;
+    justify-content: space-around;
+}
+
+.player {
+    background-color: #c6c6c6;
+    padding: 28px;
+    border-radius: 20px;
+    margin-top:5vh
+}
+
+.player img {
+    width: 84px;
+    height: 84px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+.info {
+    color: #0000ff;
+}
+
+.info p {
+    opacity: 0.68;
+    font-size: 19px;
+}
+
+.info-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.player h1 {
+    font-size: 27px;
+    color: #0000ff;
+    padding-bottom: 7px;
+}
+
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.track {
+    padding-top: 28px;
+    position: relative;
+
+}
+
+.track::before {
+    content: '';
+    height: 6px;
+    width: 100%;
+    display: block;
+    background: #0000ff;
+    opacity: 0.3;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.track::after {
+    content: '';
+    height: 6px;
+    width: 1%;
+    display: block;
+    background: #0000ff;
+    border-radius: 10px;
+
+
+}
+
+.time {
+    opacity: 0.7;
+    font-size: 14px;
+    color: #0000ff;
+
+    display: flex;
+    justify-content: space-between;
+    padding-top: 9.6px;
+}
+
+@media (max-width: 670px) {
+    #boxes {
+        display: flex;
+        flex-direction: column;
+
+        max-width: 270px;
+        margin: auto;
+
+
+        height: auto;
+        padding-block: 60px;
+    }
+
+
+
+}
